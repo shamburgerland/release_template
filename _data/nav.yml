@@ -1,0 +1,27 @@
+- title: "Products for Webhosts"
+  href: "//cpanel.com/products/"
+  slug: Products
+
+- title: "Pricing Plans & Discounts"
+  href: "//cpanel.com/pricing/"
+  slug: Plans & Pricing
+
+- title: "cPanel Partners"
+  href: "//cpanel.com/partners/"
+  slug: Partners
+
+- title: "Support & Customer Service"
+  href: "//cpanel.com/support/"
+  slug: Support
+
+- title: "cPanel Resources"
+  href: "//cpanel.com/resources/"
+  slug: Resources
+
+- title: "Careers"
+  href: "//jobs.cpanel.com"
+  slug: Careers
+
+- title: "Demo cPanel & WHM"
+  href: "//cpanel.com/demo/"
+  slug: Preview

@@ -1,0 +1,60 @@
+# Site settings
+title:              Releases | cPanel, Inc.
+email:              marketing@cpanel.net
+tagline:            'The Hosting Platform of Choice'
+description:        "The web hosting industry's most reliable, intuitive control panel since 1997."
+author:             'cPanel / Mary Shamburger'
+url:                //releases.cpanel.com
+baseurl:            ""
+
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title:          twitter
+    url:            http://twitter.com/cpanel
+  - title:          facebook
+    url:            http://facebook.com/cpanel
+  - title:          github
+    url:            http://github.com/cpanel
+
+
+# Footer settings
+footer:
+  copyright:        cPanel, Inc.
+  location:         Houston, TX
+  social:           Around the Web
+  credits:          Credits
+
+
+# Postal address (add as many lines as necessary)
+address:
+  - line:           2550 North Loop W., Suite 4006, Houston, TX 77092 
+
+
+# Build Settings
+markdown:           kramdown
+permalink:          pretty
+#relative_permalinks: true
+#paginate:           5 
+version:            1.0
+
+# Exclude files in publish site: ./_site
+exclude: [
+    "node_modules",
+    "Gruntfile.js",
+    "package.json",
+    "package-lock.json",
+    "assets/less",
+    "assets/js/custom",
+    "assets/js/bootstrap",
+    "assets/js/vendor",
+]
+
+# Include files in publish site: ./_site
+#include: [
+#    ".htaccess"
+#]
+
+
+# Backup / reference code
+# Original code in the head.html file: <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

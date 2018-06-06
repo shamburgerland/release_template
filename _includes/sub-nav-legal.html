@@ -1,0 +1,14 @@
+<div class="container-fluid jumplinks visible-lg-block bg-gray legal">
+    <div class="container-max-width">
+        <ul class="nav navbar-nav navbar-left secondary-nav">
+        {% assign pages = site.pages | sort: 'weight' %} 
+            {% for p in pages %}
+            {% if p.menu == 'legal' %}
+            <li{% if p.url == page.url %} class="active"{% endif %}>
+                  <a href="{{ p.url | prepend: site.baseurl }}" title="{{ p.title }} | {{ site.title }}">{{ p.slug }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}     
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,219 @@
+---
+layout: default
+title: The Hosting Platform of Choice
+description: With its first-class support and rich feature set, cPanel & WHM has been the web hosting industry's most reliable, intuitive control panel since 1997.
+ogtitle: The Hosting Platform of Choice
+ogimage: //cpanel.com/assets/img/opengraph/index.png
+---
+<!--
+
+Update the content below by accessing data files located in the _data/releases folder:
+
+timeline.yml - updates the stage the current release is in. Instructions are provided within the file.
+features.yml - updates the latest feature section.
+security.yml - updates the latest security features.
+xtra_feat.yml - updates additional features related to the current release.
+
+-->
+
+
+<header class="container-fluid release-index">
+	<div class="row">
+		<div class="jumbotron  ">
+                <h1 class="title">Version 72</h1>
+		</div>
+    </div>
+</header>
+<section class="release-nav container-fluid">
+    <div class="release-nav">
+        <ul>
+            <li>Version 72</li>
+            <li><a href="#latest">Featured</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#features">Additional Features</a></li>
+        </ul>
+    </div>
+</section>
+<section class="container-fluid release-timeline">
+    <div class="row">
+        {% for timeline in site.data.releases.timeline %}
+
+        <div class="col-sm-3 {{ timeline.class }} stage">
+            <div class="row">
+                <div class="col-xs-5 col-sm-12 col-lg-4 state">{{ timeline.state }}</div>
+                <div class="col-xs-7 col-sm-12 col-lg-8 release-dt">
+                    <p>{{ timeline.status }}<br/>
+                    {{ timeline.date }}</p>
+                </div>
+                {% if timeline.class == "complete" %}
+                <div class="arrow arrow-dkblue"></div>
+                {% else %}
+                    {% if timeline.class == "active" %}
+                    <div class="arrow arrow-orange"></div>   
+                    {% else %}  
+                        {% if timeline.class == "scheduled" %}
+                        <div class="arrow arrow-white"></div>
+                        <div class="arrow arrow-grey"></div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+</section>
+<!-- LATEST FEATURES-->
+<section id="features-wrap">
+    <a name="latest"></a>
+    <div class="container features">
+        <div class="row feat-heading">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="heading">Latest Features</h2>
+                <p class="latest-feat">Sweet roll biscuit donut tiramisu gingerbread marshmallow carrot cake gingerbread. Jelly beans gummies macaroon pudding halvah sesame snaps candy. Gingerbread marzipan halvah sugar plum wafer soufflé dessert. Soufflé tootsie roll gummies.</p>
+            </div>
+        </div>
+        <div class="row feature-list">
+        {% assign i = 0%}
+        {% for features in site.data.releases.features%}
+            {% assign i = i | plus: 1 %}
+            {% if i == 3 %}
+            <div class="col-md-4 latest-item">
+                <img src="/assets/img/releases/{{ features.icon }}">
+                <h3>{{ features.name }}</h3>
+                <p>{{ features.description }}</p>
+                <a href="{{ features.href }}" class="more-btn">Read More</a>
+            </div>
+        </div>
+        <div class="row feature-list">
+            {% else %}
+            <div class="col-md-4 latest-item">
+                <img src="/assets/img/releases/{{ features.icon }}">
+                <h3>{{ features.name }}</h3>
+                <p>{{ features.description }}</p>
+                <a href="{{ features.href }}" class="more-btn">Read More</a>
+            </div>
+            {% endif %}
+        {% endfor %}
+        </div> 
+        <div class="row product-shot">
+            <div class="col-sm-8 col-sm-offset-2">
+                <img src="/assets/img/releases/product-img.jpg" class="product-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="container feature-divider"/>
+<!-- SECURITY FEATURES-->
+<a name="security"></a>
+<section >
+    <div class="container features">
+        <div class="row feat-heading">
+            <div class="col-md-8 col-md-offset-2">
+                <img src="/assets/img/releases/security.png">
+                <h2 class="heading">Security Features</h2>
+                <p class="latest-feat">Sweet roll biscuit donut tiramisu gingerbread marshmallow carrot cake gingerbread. Jelly beans gummies macaroon pudding halvah sesame snaps candy. Gingerbread marzipan halvah sugar plum wafer soufflé dessert. Soufflé tootsie roll gummies.</p>
+            </div>
+        </div>
+        <div class="row feature-list">
+            {% assign i = 0 %}
+            {% for security in site.data.releases.security %}
+                {% assign i = i | plus: 1 %}
+                {% if i == 2 %}
+                <div class= "col-md-6 feat-item">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-2">
+                            <img src="/assets/img/releases/{{ security.icon }}">
+                        </div>
+                        <div class="col-xs-9 col-sm-10">
+                                <h4>{{ security.name }}</h4>
+                                <p>{{ security.description }} | <a href="{{ security.href }}">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row feature-list">
+            {% else %}
+            <div class= "col-md-6 feat-item">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2">
+                        <img src="/assets/img/releases/{{ security.icon }}">
+                    </div>
+                    <div class="col-xs-9 col-sm-10">
+                            <h4>{{ security.name }}</h4>
+                            <p>{{ security.description }} | <a href="{{ security.href }}">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% endfor %}
+        </div>            
+    </div>
+</section>
+<!--  ADDITIONAL FEATURES-->
+<hr class="container"/>
+<section>
+    <a name="features"></a>
+        <div class="container features">
+            <div class="row feat-heading">
+                <div class="col-md-8 col-md-offset-2">
+                    <img src="/assets/img/releases/additional_feat.png">
+                    <h2 class="heading">Additional Features</h2>
+                    <p class="latest-feat">Sweet roll biscuit donut tiramisu gingerbread marshmallow carrot cake gingerbread. Jelly beans gummies macaroon pudding halvah sesame snaps candy. Gingerbread marzipan halvah sugar plum wafer soufflé dessert. Soufflé tootsie roll gummies.</p>
+                </div>
+            </div>
+            <div class="row feature-list">
+            {% assign i = 0 %}
+            {% for xtra_feat in site.data.releases.xtra_feat %}
+                {% assign i = i | plus: 1 %}
+                {% if i == 3 %}
+                <div class= "col-md-4 feat-item">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <img src="/assets/img/releases/{{ xtra_feat.icon }}">
+                        </div>
+                        <div class="col-xs-10">
+                                <h4>{{ xtra_feat.name }}</h4>
+                                <p>{{ xtra_feat.description }} | <a href="{{ xtra_feat.href }}">Read More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row feature-list">
+            {% else %}
+
+            <div class= "col-md-4 feat-item">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <img src="/assets/img/releases/{{ xtra_feat.icon }}">
+                    </div>
+                    <div class="col-xs-10">
+                            <h4>{{ xtra_feat.name }}</h4>
+                            <p>{{ xtra_feat.description }} | <a href="{{ xtra_feat.href }}">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="cta-bank">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 cta">
+                    <h3>Ready to Upgrade?</h3>
+                    <a href="//documentation.cpanel.net/">Get the Lastest Version</a>
+                </div>
+                <div class="col-sm-6 cta">
+                    <h3>Questions? Tech Support Can Help.</h3>
+                    <a href="//tickets.cpanel.net">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    

@@ -1,0 +1,10 @@
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+        {% for nav in site.data.nav %}
+            <li{% if nav.href == page.url %} class="active"{% endif %}>
+                  <a href="{{ nav.href }}" title="{{ nav.title }} | {{ site.title }}" onClick="ga('send', 'event', 'link', 'click', 'nav - {{ nav.title }}');">{{ nav.slug }}</a>
+            </li>
+        {% endfor %}            
+        </ul>
+    </div><!-- /.navbar-collapse -->

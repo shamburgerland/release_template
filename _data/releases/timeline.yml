@@ -1,0 +1,34 @@
+# state: section of timeline showing the stage of eache release
+# class: update this field using one of the following:
+
+#     complete - version has moved to next stage
+#     active - version is in this stage
+#     scheduled - version has not reached this stage
+
+# status: state whether version is released or planned
+# date: edit this date stage is planned to release, or was released
+
+
+- state: EDGE #Do not edit this line
+  class: complete
+  status: Released
+  date: June 1, 2018
+- state: CURRENT #Do not edit this line
+  class: active
+  status: Released
+  date: June 1, 2018
+- state: RELEASE #Do not edit this line
+  class: scheduled
+  status: Planned
+  date: June 1, 2018
+- state: STABLE #Do not edit this line
+  class: scheduled
+  status: Planned
+  date: June 1, 2018
+  
+
+        
+
+
+      
+      

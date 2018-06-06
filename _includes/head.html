@@ -1,0 +1,38 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.title =="US Embargo Details" %}<meta name="robots" content="noindex, nofollow" />{% endif %}
+
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:url" content="//cpanel.com{{ page.permalink }}" />
+    <meta property="og:title" content="{{ page.ogtitle }} | {{ site.title }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:image" content="{{ page.ogimage }}" />
+    <meta property="og:image:secure_url" content="{{ page.ogimage }}" />
+
+   {% if page.title == "Partner Resources" %}
+    <meta name="robots" content="noindex, nofollow"> 
+   {% endif %} 
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl }}">
+
+    <!-- font -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Montserrat:400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- misc -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/assets/img/favicon.ico">
+   
+
+{% comment %}
+    <!-- ADA Live Chat Part 1 of 2 -->
+    <script src="https://static.ada.support/embed.f631f661.min.js" charset="utf-8"></script>
+{% endcomment %}
+</head>

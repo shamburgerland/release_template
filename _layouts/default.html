@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    {{ content }}
+    
+    {% include footer.html %}
+    
+  </body>
+
+  {% comment %}
+  <!-- ADA Live Chat Part 2 of 2 -->
+  <script type="text/javascript">
+      var acmeAdaBot = new AdaChaperone('cpanel');
+  </script>
+  {% endcomment %}
+
+</html>

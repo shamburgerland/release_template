@@ -1,0 +1,45 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    {% if page.title == "The Hosting Platform of Choice" %}
+    <!-- Facebook https://developers.facebook.com/tools/debug/og/object?q=http%3A%2F%2Fconference14.cpanel.net -->
+    <!-- Facebook Object info https://developers.facebook.com/docs/opengraph/using-objects#objectapi -->
+    <meta property="og:url" content="http://cpanel.com" /> 
+    <meta property="og:title" content="cPanel Inc. | The Hosting Platform of Choice" /> 
+    <meta property="og:image" content="http://cpanel.com/assets/img/index/website-header.jpg" /> 
+   {% endif %} 
+    
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl }}">
+    
+    <!-- font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- misc -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/assets/img/favicon.ico">
+
+   <!-- HotJar Tracking */ -->
+    <script>
+    (function(f,b){
+        var c;
+        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+        f._hjSettings={hjid:21991, hjsv:3};
+        c=b.createElement("script");c.async=1;
+        c.src="//static.hotjar.com/c/hotjar-21991.js?sv=3";
+        b.getElementsByTagName("head")[0].appendChild(c); 
+    })(window,document);
+    </script>
+<!-- Optimizely -->
+    <script src="//cdn.optimizely.com/js/2362300247.js"></script>
+
+    
+</head>
